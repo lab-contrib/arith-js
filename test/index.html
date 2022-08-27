@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>单元测试 | arith-js</title>
+    <link rel="shortcut icon" href="../logo.png">
+    <script src="../node_modules/async-allege-web/dist/async-allege-web.js"></script>
+    <script src="../dist/arith-js.js"></script>
+    <style>
+        [async-allege-web] {
+            left: 0 !important;
+            top: 0 !important;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        [async-allege-web]>div {
+            width: calc(100vw - 8px);
+            height: calc(100vh - 50px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="async-allege-web"></div>
+    <script>
+        window.allege = AsyncAllegeWeb(document.getElementById('async-allege-web'), "单元测试 | arith-js");
+    </script>
+
+    <script src="./matrix.spec.js"></script>
+    <script src="./sigmoid.spec.js"></script>
+
+</body>
+
+</html>
